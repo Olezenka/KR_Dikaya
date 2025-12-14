@@ -85,6 +85,7 @@
             this.buttonTenants.TabIndex = 7;
             this.buttonTenants.Text = "Арендаторы";
             this.buttonTenants.UseVisualStyleBackColor = false;
+            this.buttonTenants.Click += new System.EventHandler(this.buttonTenants_Click);
             // 
             // buttonWorkers
             // 

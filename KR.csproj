@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddArendator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddArendator.Designer.cs">
+      <DependentUpon>AddArendator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capcha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,12 +85,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TenantsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantsTable.Designer.cs">
+      <DependentUpon>TenantsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkTables2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WorkTables2.Designer.cs">
       <DependentUpon>WorkTables2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddArendator.resx">
+      <DependentUpon>AddArendator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capcha.resx">
       <DependentUpon>Capcha.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,10 +118,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TenantsTable.resx">
+      <DependentUpon>TenantsTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkTables2.resx">
       <DependentUpon>WorkTables2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\KR.FolderModel.Tenants.datasource" />
     <None Include="Properties\DataSources\KR.FolderModel.Workers.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -42,5 +42,12 @@ namespace KR.FolderModel
             formW.ShowDialog();
             this.Close();
         }
+
+        private void buttonTenants_Click(object sender, EventArgs e)
+        {
+            TenantsTable tenantsTable = new TenantsTable();
+            tenantsTable.ShowDialog();
+            this.Close();
+        }
     }
 }
