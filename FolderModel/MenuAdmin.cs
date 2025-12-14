@@ -19,7 +19,8 @@ namespace KR.FolderModel
 
         private void MenuAdmin_Load(object sender, EventArgs e)
         {
-            labelSotrName.Text = FormAutorizacia.sotrName;
+            label2.Text = "Доброе пожаловать!\n" + FormAutorizacia.sotrName;
+            label3.Text = FormAutorizacia.sotrRole;
         }
     }
 }
