@@ -40,5 +40,13 @@ namespace KR
             this.Close();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Mall mall = DB.Mall.Find((int)dataGridView1.CurrentRow.Cells[0].Value);
+            DB.Mall.Remove(mall);
+            DB.SaveChanges();
+            LoadTables();
+        }
+
     }
 }
