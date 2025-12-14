@@ -30,11 +30,10 @@ namespace KR
             Model1 model = new Model1();
             Workers sotrs = model.Workers.ToList().SingleOrDefault(x =>
             x.Login == textBoxLogin.Text && x.Password == textBoxPassword.Text);
-            sotrName = sotrs.Second_Name;
-            //sotrName = sotrs.First_Name + " " + sotrs.Second_Name + " " + sotrs.Middle_Name;
-            sotrRole = sotrs.Role;
             if (sotrs != null)
             {
+                sotrName = sotrs.First_Name + " " + sotrs.Second_Name + " " + sotrs.Middle_Name;
+                sotrRole = sotrs.Role;
                 if (sotrs.Role == "Заблокирован")
                 {
                     MessageBox.Show("Пользователь заблокирован. Обратитесь к администратору для разблокировки");

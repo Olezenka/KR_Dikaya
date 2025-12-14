@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KR.FolderModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,28 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KR.FolderModel;
 
-namespace KR.FolderModel
+namespace KR
 {
-    public partial class WorkersTable : Form
+    public partial class WorkTables2 : Form
     {
-
-        public WorkersTable()
+        public WorkTables2()
         {
             InitializeComponent();
         }
 
         public static Model1 DB = new Model1();
-        private void genderLabel_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void genderTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WorkersTable_Load(object sender, EventArgs e)
+        private void WorkTables2_Load(object sender, EventArgs e)
         {
             workersBindingSource.DataSource = DB.Workers.ToList();
         }

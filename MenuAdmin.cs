@@ -19,7 +19,8 @@ namespace KR.FolderModel
 
         private void MenuAdmin_Load(object sender, EventArgs e)
         {
-            label2.Text = "Доброе пожаловать!\n" + FormAutorizacia.sotrName;
+            //label2.Text = "Добро пожаловать!\n" + FormAutorizacia.sotrName;
+            label2.Text = FormAutorizacia.sotrName;
             label3.Text = FormAutorizacia.sotrRole;
         }
 
@@ -33,6 +34,13 @@ namespace KR.FolderModel
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonWorkers_Click(object sender, EventArgs e)
+        {
+            WorkTables2 formW = new WorkTables2();
+            formW.ShowDialog();
+            this.Close();
         }
     }
 }
