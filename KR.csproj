@@ -62,6 +62,12 @@
       <DependentUpon>Capcha.cs</DependentUpon>
     </Compile>
     <Compile Include="FolderModel\Mall.cs" />
+    <Compile Include="FolderModel\MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderModel\MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FolderModel\Model1.cs" />
     <Compile Include="FolderModel\Tenants.cs" />
     <Compile Include="FolderModel\Workers.cs" />
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Capcha.resx">
       <DependentUpon>Capcha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderModel\MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAutorizacia.resx">
       <DependentUpon>FormAutorizacia.cs</DependentUpon>

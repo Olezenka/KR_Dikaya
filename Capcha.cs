@@ -52,7 +52,7 @@ namespace KR
         {
             if (textBox1.Text == CapchaText)
             {
-                MessageBox.Show("Добро пожаловать");
+                Close();
             }
             else
             {

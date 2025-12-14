@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,12 +23,13 @@ namespace KR
         {
 
         }
-
+        public static string sotrName;
         private void buttonEntr_Click(object sender, EventArgs e)
         {
             Model1 model = new Model1();
             Workers sotrs = model.Workers.ToList().SingleOrDefault(x =>
             x.Login == textBoxLogin.Text && x.Password == textBoxPassword.Text);
+            sotrName = sotrs.Second_Name;
             if (sotrs != null)
             {
                 if (sotrs.Role == "Заблокирован")
@@ -41,7 +43,13 @@ namespace KR
                     MessageBox.Show("Пользователь был удален.");
                     textBoxLogin.Text = "";
                     textBoxPassword.Text = "";
-                }    
+                }
+                else if (sotrs.Role == "Администратор")
+                {
+                    MenuAdmin menu = new MenuAdmin();
+                    menu.Visible = true;
+                    this.Visible = false;
+                }
                 else
                 {
                     Capcha capcha = new Capcha();
@@ -54,8 +62,14 @@ namespace KR
                     }
                     else
                     {
-                        if (sotrs.Role == "Администратор") { MessageBox.Show("Здесь будет меню администратора"); }
-                        if (sotrs.Role.Contains("Менеджер")) { MessageBox.Show("Здесь будет меню менеджера"); }
+                        else if (sotrs.Role.Contains("Менеджер")) 
+                        {
+                            MessageBox.Show("Здесь будет меню менеджера");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Для этой роли не предусмотрен рабочий стол");
+                        }
                     }
                 }    
             }
