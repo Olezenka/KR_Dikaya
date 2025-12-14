@@ -62,7 +62,7 @@ namespace KR
                     }
                     else
                     {
-                        else if (sotrs.Role.Contains("Менеджер")) 
+                        if (sotrs.Role.Contains("Менеджер"))
                         {
                             MessageBox.Show("Здесь будет меню менеджера");
                         }
