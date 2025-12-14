@@ -52,6 +52,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 554);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -64,6 +65,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Введите слово";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -100,6 +102,7 @@
             this.buttonCapcha.TabIndex = 3;
             this.buttonCapcha.Text = "Ввести";
             this.buttonCapcha.UseVisualStyleBackColor = true;
+            this.buttonCapcha.Click += new System.EventHandler(this.buttonCapcha_Click);
             // 
             // Capcha
             // 
@@ -109,6 +112,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Capcha";
             this.Text = "Capcha";
+            this.Load += new System.EventHandler(this.Capcha_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

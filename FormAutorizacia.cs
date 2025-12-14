@@ -30,9 +30,21 @@ namespace KR
             x.Login == textBoxLogin.Text && x.Password == textBoxPassword.Text);
             if (sotrs != null)
             {
-                Capcha capcha = new Capcha();
-                capcha.ShowDialog();
-                this.Close();
+                if (sotrs.Role == "Заблокирован")
+                {
+                    MessageBox.Show("Пользователь заблокирован. Обратитесь к администратору для разблокировки");
+                }
+                else
+                {
+                    Capcha capcha = new Capcha();
+                    capcha.ShowDialog();
+                    if (capcha.BlockSotr)
+                    {
+                        sotrs.Role = "Заблокирован";
+                        model.SaveChanges();
+                        Close();
+                    }
+                }    
             }
             else
             {

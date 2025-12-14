@@ -16,5 +16,60 @@ namespace KR
         {
             InitializeComponent();
         }
+        public bool BlockSotr = false;
+        string CapchaText;
+        int remaining = 3;
+        private void CreateCapcha()
+        {
+            string combination = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890" + "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+            Random random = new Random();
+            CapchaText = "";
+            for (int i = 0; i < 5; i++)
+            {
+                CapchaText += combination[random.Next(combination.Length)];
+            }
+            labelCapcha.Text = CapchaText;
+        }
+        
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Capcha_Load(object sender, EventArgs e)
+        {
+            CreateCapcha();
+        }
+
+        private void buttonCapcha_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == CapchaText)
+            {
+                MessageBox.Show("Добро пожаловать");
+            }
+            else
+            {
+                remaining--;
+                if (remaining > 0)
+                {
+                    MessageBox.Show($"Попыток осталось: {remaining}");
+                    CreateCapcha();
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Попытки кончились. Пользователь заблокирован");
+                    BlockSotr = true;
+                    Close();
+                }
+            }
+        }
     }
 }
