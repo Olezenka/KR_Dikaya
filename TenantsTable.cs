@@ -51,5 +51,13 @@ namespace KR
         {
             LoadTable();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            Tenants tenants = DB.Tenants.Find((int)dataGridView1.CurrentRow.Cells[0].Value);
+            DB.Tenants.Remove(tenants);
+            DB.SaveChanges();
+            LoadTable();
+        }
     }
 }

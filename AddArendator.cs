@@ -35,11 +35,12 @@ namespace KR
             {
                 try
                 {
+                    
                     Tenants tenants = new Tenants();
                     tenants.Adress = adressTextBox.Text;
                     tenants.Phone = phoneTextBox.Text;
                     tenants.Name = nameTextBox.Text;
-                    //tenants.ID = Convert.ToInt32(iDTextBox.Text);
+                    tenants.ID = DB.Tenants.ToList().Count + 1;
 
                     AddArendator.DB.Tenants.Add(tenants);
                     AddArendator.DB.SaveChanges();
