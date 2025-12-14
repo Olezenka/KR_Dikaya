@@ -22,5 +22,17 @@ namespace KR.FolderModel
             label2.Text = "Доброе пожаловать!\n" + FormAutorizacia.sotrName;
             label3.Text = FormAutorizacia.sotrRole;
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            FormAutorizacia form = new FormAutorizacia();
+            form.Visible = true;
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

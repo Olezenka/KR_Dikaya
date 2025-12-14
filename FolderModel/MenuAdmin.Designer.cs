@@ -30,10 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonWorkers = new System.Windows.Forms.Button();
+            this.buttonTenants = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,12 +47,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-6, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 607);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -64,18 +67,19 @@
             this.label1.Text = "Меню";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(47, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 45);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonBack.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(47, 42);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(158, 45);
+            this.buttonBack.TabIndex = 2;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // panel2
             // 
@@ -83,6 +87,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.buttonTenants);
+            this.panel2.Controls.Add(this.buttonWorkers);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(18, 111);
@@ -116,6 +122,34 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
             // 
+            // buttonWorkers
+            // 
+            this.buttonWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWorkers.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonWorkers.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWorkers.Location = new System.Drawing.Point(153, 184);
+            this.buttonWorkers.Name = "buttonWorkers";
+            this.buttonWorkers.Size = new System.Drawing.Size(262, 147);
+            this.buttonWorkers.TabIndex = 6;
+            this.buttonWorkers.Text = "Учетные записи";
+            this.buttonWorkers.UseVisualStyleBackColor = false;
+            // 
+            // buttonTenants
+            // 
+            this.buttonTenants.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTenants.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonTenants.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTenants.Location = new System.Drawing.Point(574, 184);
+            this.buttonTenants.Name = "buttonTenants";
+            this.buttonTenants.Size = new System.Drawing.Size(262, 147);
+            this.buttonTenants.TabIndex = 7;
+            this.buttonTenants.Text = "Арендаторы";
+            this.buttonTenants.UseVisualStyleBackColor = false;
+            // 
             // MenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -138,7 +172,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonTenants;
+        private System.Windows.Forms.Button buttonWorkers;
     }
 }

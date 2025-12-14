@@ -71,6 +71,12 @@
     <Compile Include="FolderModel\Model1.cs" />
     <Compile Include="FolderModel\Tenants.cs" />
     <Compile Include="FolderModel\Workers.cs" />
+    <Compile Include="FolderModel\WorkersTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderModel\WorkersTable.Designer.cs">
+      <DependentUpon>WorkersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAutorizacia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FolderModel\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderModel\WorkersTable.resx">
+      <DependentUpon>WorkersTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAutorizacia.resx">
       <DependentUpon>FormAutorizacia.cs</DependentUpon>
