@@ -78,7 +78,6 @@ namespace KR
             else
             {
                 MessageBox.Show("Логин или пароль указаны неверно");
-                Close();
             }
         }
 

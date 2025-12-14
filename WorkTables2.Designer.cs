@@ -396,6 +396,7 @@
             this.buttonDelete.TabIndex = 10;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonChange
             // 
@@ -409,6 +410,7 @@
             this.buttonChange.TabIndex = 9;
             this.buttonChange.Text = "Изменить";
             this.buttonChange.UseVisualStyleBackColor = false;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonAdd
             // 
@@ -422,6 +424,7 @@
             this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonBack
             // 
@@ -434,6 +437,7 @@
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
