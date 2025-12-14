@@ -62,16 +62,22 @@ namespace KR
                         model.SaveChanges();
                         Close();
                     }
-                    else
+                    else if (capcha.Great)
                     {
                         if (sotrs.Role.Contains("Менеджер"))
                         {
-                            MessageBox.Show("Здесь будет меню менеджера");
+                            MenedgersMenu menedgersMenu = new MenedgersMenu();
+                            menedgersMenu.ShowDialog();
+                            this.Close();
                         }
                         else
                         {
                             MessageBox.Show("Для этой роли не предусмотрен рабочий стол");
                         }
+                    }
+                    else
+                    {
+
                     }
                 }    
             }

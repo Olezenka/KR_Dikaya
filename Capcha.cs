@@ -17,6 +17,7 @@ namespace KR
             InitializeComponent();
         }
         public bool BlockSotr = false;
+        public bool Great = false;
         string CapchaText;
         int remaining = 3;
         private void CreateCapcha()
@@ -52,6 +53,8 @@ namespace KR
         {
             if (textBox1.Text == CapchaText)
             {
+
+                Great = true;
                 Close();
             }
             else

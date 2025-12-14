@@ -45,8 +45,8 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.statusTextBox = new System.Windows.Forms.TextBox();
             this.townTextBox = new System.Windows.Forms.TextBox();
-            this.mallBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.mallBindingSource = new System.Windows.Forms.BindingSource(this.components);
             amount_PLabel = new System.Windows.Forms.Label();
             coeff_costLabel = new System.Windows.Forms.Label();
             costLabel = new System.Windows.Forms.Label();
@@ -68,15 +68,6 @@
             amount_PLabel.TabIndex = 1;
             amount_PLabel.Text = "Amount P:";
             // 
-            // amount_PTextBox
-            // 
-            this.amount_PTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.amount_PTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Amount_P", true));
-            this.amount_PTextBox.Location = new System.Drawing.Point(160, 68);
-            this.amount_PTextBox.Name = "amount_PTextBox";
-            this.amount_PTextBox.Size = new System.Drawing.Size(360, 31);
-            this.amount_PTextBox.TabIndex = 2;
-            // 
             // coeff_costLabel
             // 
             coeff_costLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -86,15 +77,6 @@
             coeff_costLabel.Size = new System.Drawing.Size(115, 25);
             coeff_costLabel.TabIndex = 3;
             coeff_costLabel.Text = "Coeff cost:";
-            // 
-            // coeff_costTextBox
-            // 
-            this.coeff_costTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.coeff_costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Coeff_cost", true));
-            this.coeff_costTextBox.Location = new System.Drawing.Point(160, 105);
-            this.coeff_costTextBox.Name = "coeff_costTextBox";
-            this.coeff_costTextBox.Size = new System.Drawing.Size(360, 31);
-            this.coeff_costTextBox.TabIndex = 4;
             // 
             // costLabel
             // 
@@ -106,15 +88,6 @@
             costLabel.TabIndex = 5;
             costLabel.Text = "Cost:";
             // 
-            // costTextBox
-            // 
-            this.costTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Cost", true));
-            this.costTextBox.Location = new System.Drawing.Point(160, 142);
-            this.costTextBox.Name = "costTextBox";
-            this.costTextBox.Size = new System.Drawing.Size(360, 31);
-            this.costTextBox.TabIndex = 6;
-            // 
             // floorLabel
             // 
             floorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -124,15 +97,6 @@
             floorLabel.Size = new System.Drawing.Size(67, 25);
             floorLabel.TabIndex = 7;
             floorLabel.Text = "Floor:";
-            // 
-            // floorTextBox
-            // 
-            this.floorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.floorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Floor", true));
-            this.floorTextBox.Location = new System.Drawing.Point(160, 179);
-            this.floorTextBox.Name = "floorTextBox";
-            this.floorTextBox.Size = new System.Drawing.Size(360, 31);
-            this.floorTextBox.TabIndex = 8;
             // 
             // imageLabel
             // 
@@ -144,15 +108,6 @@
             imageLabel.TabIndex = 11;
             imageLabel.Text = "Image:";
             // 
-            // imageTextBox
-            // 
-            this.imageTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.imageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Image", true));
-            this.imageTextBox.Location = new System.Drawing.Point(160, 216);
-            this.imageTextBox.Name = "imageTextBox";
-            this.imageTextBox.Size = new System.Drawing.Size(360, 31);
-            this.imageTextBox.TabIndex = 12;
-            // 
             // nameLabel
             // 
             nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -162,15 +117,6 @@
             nameLabel.Size = new System.Drawing.Size(74, 25);
             nameLabel.TabIndex = 13;
             nameLabel.Text = "Name:";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(160, 253);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(360, 31);
-            this.nameTextBox.TabIndex = 14;
             // 
             // statusLabel
             // 
@@ -182,15 +128,6 @@
             statusLabel.TabIndex = 15;
             statusLabel.Text = "Status:";
             // 
-            // statusTextBox
-            // 
-            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Status", true));
-            this.statusTextBox.Location = new System.Drawing.Point(160, 290);
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(360, 31);
-            this.statusTextBox.TabIndex = 16;
-            // 
             // townLabel
             // 
             townLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -201,6 +138,69 @@
             townLabel.TabIndex = 17;
             townLabel.Text = "Town:";
             // 
+            // amount_PTextBox
+            // 
+            this.amount_PTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.amount_PTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Amount_P", true));
+            this.amount_PTextBox.Location = new System.Drawing.Point(160, 68);
+            this.amount_PTextBox.Name = "amount_PTextBox";
+            this.amount_PTextBox.Size = new System.Drawing.Size(360, 31);
+            this.amount_PTextBox.TabIndex = 2;
+            // 
+            // coeff_costTextBox
+            // 
+            this.coeff_costTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.coeff_costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Coeff_cost", true));
+            this.coeff_costTextBox.Location = new System.Drawing.Point(160, 105);
+            this.coeff_costTextBox.Name = "coeff_costTextBox";
+            this.coeff_costTextBox.Size = new System.Drawing.Size(360, 31);
+            this.coeff_costTextBox.TabIndex = 4;
+            // 
+            // costTextBox
+            // 
+            this.costTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Cost", true));
+            this.costTextBox.Location = new System.Drawing.Point(160, 142);
+            this.costTextBox.Name = "costTextBox";
+            this.costTextBox.Size = new System.Drawing.Size(360, 31);
+            this.costTextBox.TabIndex = 6;
+            // 
+            // floorTextBox
+            // 
+            this.floorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.floorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Floor", true));
+            this.floorTextBox.Location = new System.Drawing.Point(160, 179);
+            this.floorTextBox.Name = "floorTextBox";
+            this.floorTextBox.Size = new System.Drawing.Size(360, 31);
+            this.floorTextBox.TabIndex = 8;
+            // 
+            // imageTextBox
+            // 
+            this.imageTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.imageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Image", true));
+            this.imageTextBox.Location = new System.Drawing.Point(160, 216);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(360, 31);
+            this.imageTextBox.TabIndex = 12;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(160, 253);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(360, 31);
+            this.nameTextBox.TabIndex = 14;
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mallBindingSource, "Status", true));
+            this.statusTextBox.Location = new System.Drawing.Point(160, 290);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(360, 31);
+            this.statusTextBox.TabIndex = 16;
+            // 
             // townTextBox
             // 
             this.townTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -209,10 +209,6 @@
             this.townTextBox.Name = "townTextBox";
             this.townTextBox.Size = new System.Drawing.Size(360, 31);
             this.townTextBox.TabIndex = 18;
-            // 
-            // mallBindingSource
-            // 
-            this.mallBindingSource.DataSource = typeof(KR.FolderModel.Mall);
             // 
             // button1
             // 
@@ -226,6 +222,10 @@
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mallBindingSource
+            // 
+            this.mallBindingSource.DataSource = typeof(KR.FolderModel.Mall);
             // 
             // TCAdd
             // 
@@ -252,6 +252,7 @@
             this.Controls.Add(this.townTextBox);
             this.Name = "TCAdd";
             this.Text = "TCAdd";
+            this.Load += new System.EventHandler(this.TCAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mallBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

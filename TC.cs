@@ -21,7 +21,9 @@ namespace KR
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TCAdd tCAdd = new TCAdd();
+            tCAdd.ShowDialog();
+            this.Close();
         }
 
         private void TC_Load(object sender, EventArgs e)
@@ -48,5 +50,22 @@ namespace KR
             LoadTables();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveData();
+        }
+        private void SaveData()
+        {
+            try
+            {
+                Validate();
+                DB.SaveChanges();
+                LoadTables();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

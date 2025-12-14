@@ -52,5 +52,10 @@ namespace KR
 
             }
         }
+
+        private void TCAdd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
