@@ -16,5 +16,15 @@ namespace KR.FolderModel
         {
             InitializeComponent();
         }
+
+        private void genderLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
