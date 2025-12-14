@@ -59,5 +59,23 @@ namespace KR
             DB.SaveChanges();
             LoadTable();
         }
+
+        private void buttonChange_Click(object sender, EventArgs e)
+        {
+            SaveData();
+        }
+        private void SaveData()
+        {
+            try
+            {
+                Validate();
+                DB.SaveChanges();
+                LoadTable ();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
