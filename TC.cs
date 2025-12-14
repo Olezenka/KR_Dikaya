@@ -23,7 +23,6 @@ namespace KR
         {
             TCAdd tCAdd = new TCAdd();
             tCAdd.ShowDialog();
-            this.Close();
         }
 
         private void TC_Load(object sender, EventArgs e)
@@ -38,7 +37,7 @@ namespace KR
         private void button2_Click(object sender, EventArgs e)
         {
             MenedgersMenu menedgersMenu = new MenedgersMenu();
-            menedgersMenu.ShowDialog();
+            menedgersMenu.Visible = true;
             this.Close();
         }
 

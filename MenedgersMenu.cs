@@ -43,7 +43,7 @@ namespace KR
         private void buttonWorkers_Click(object sender, EventArgs e)
         {
             TC tc = new TC();
-            tc.ShowDialog();
+            tc.Visible = true;
             this.Close();
         }
     }

@@ -67,8 +67,8 @@ namespace KR
                         if (sotrs.Role.Contains("Менеджер"))
                         {
                             MenedgersMenu menedgersMenu = new MenedgersMenu();
-                            menedgersMenu.ShowDialog();
-                            this.Close();
+                            menedgersMenu.Visible = true;
+                            this.Visible = false;
                         }
                         else
                         {
