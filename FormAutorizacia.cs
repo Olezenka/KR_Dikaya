@@ -33,7 +33,15 @@ namespace KR
                 if (sotrs.Role == "Заблокирован")
                 {
                     MessageBox.Show("Пользователь заблокирован. Обратитесь к администратору для разблокировки");
+                    textBoxLogin.Text = "";
+                    textBoxPassword.Text = "";
                 }
+                else if (sotrs.Role == "Удален")
+                {
+                    MessageBox.Show("Пользователь был удален.");
+                    textBoxLogin.Text = "";
+                    textBoxPassword.Text = "";
+                }    
                 else
                 {
                     Capcha capcha = new Capcha();
@@ -43,6 +51,11 @@ namespace KR
                         sotrs.Role = "Заблокирован";
                         model.SaveChanges();
                         Close();
+                    }
+                    else
+                    {
+                        if (sotrs.Role == "Администратор") { MessageBox.Show("Здесь будет меню администратора"); }
+                        if (sotrs.Role.Contains("Менеджер")) { MessageBox.Show("Здесь будет меню менеджера"); }
                     }
                 }    
             }
