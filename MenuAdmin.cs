@@ -34,6 +34,7 @@ namespace KR.FolderModel
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+
         }
 
         private void buttonWorkers_Click(object sender, EventArgs e)
