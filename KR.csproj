@@ -62,19 +62,19 @@
       <DependentUpon>Capcha.cs</DependentUpon>
     </Compile>
     <Compile Include="FolderModel\Mall.cs" />
-    <Compile Include="FolderModel\MenuAdmin.cs">
+    <Compile Include="MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FolderModel\MenuAdmin.Designer.cs">
+    <Compile Include="MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FolderModel\Model1.cs" />
     <Compile Include="FolderModel\Tenants.cs" />
     <Compile Include="FolderModel\Workers.cs" />
-    <Compile Include="FolderModel\WorkersTable.cs">
+    <Compile Include="WorkersTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FolderModel\WorkersTable.Designer.cs">
+    <Compile Include="WorkersTable.Designer.cs">
       <DependentUpon>WorkersTable.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAutorizacia.cs">
@@ -88,10 +88,10 @@
     <EmbeddedResource Include="Capcha.resx">
       <DependentUpon>Capcha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FolderModel\MenuAdmin.resx">
+    <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FolderModel\WorkersTable.resx">
+    <EmbeddedResource Include="WorkersTable.resx">
       <DependentUpon>WorkersTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAutorizacia.resx">

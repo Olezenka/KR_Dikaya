@@ -30,7 +30,8 @@ namespace KR
             Model1 model = new Model1();
             Workers sotrs = model.Workers.ToList().SingleOrDefault(x =>
             x.Login == textBoxLogin.Text && x.Password == textBoxPassword.Text);
-            sotrName = sotrs.First_Name + " " + sotrs.Second_Name + " " + sotrs.Middle_Name;
+            sotrName = sotrs.Second_Name;
+            //sotrName = sotrs.First_Name + " " + sotrs.Second_Name + " " + sotrs.Middle_Name;
             sotrRole = sotrs.Role;
             if (sotrs != null)
             {
