@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capcha.Designer.cs">
+      <DependentUpon>Capcha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FolderModel\Mall.cs" />
     <Compile Include="FolderModel\Model1.cs" />
     <Compile Include="FolderModel\Tenants.cs" />
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Capcha.resx">
+      <DependentUpon>Capcha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAutorizacia.resx">
       <DependentUpon>FormAutorizacia.cs</DependentUpon>
     </EmbeddedResource>
