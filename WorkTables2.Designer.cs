@@ -56,7 +56,6 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +66,7 @@
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             first_NameLabel = new System.Windows.Forms.Label();
             genderLabel = new System.Windows.Forms.Label();
             iDLabel = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1542, 951);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             // 
             // panel2
             // 
@@ -363,6 +363,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -446,17 +447,13 @@
             this.label1.Text = "Учетные записи";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // workersBindingSource
-            // 
-            this.workersBindingSource.DataSource = typeof(KR.FolderModel.Workers);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 200;
+            this.iDDataGridViewTextBoxColumn.Width = 77;
             // 
             // loginDataGridViewTextBoxColumn
             // 
@@ -464,7 +461,7 @@
             this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
             this.loginDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.Width = 200;
+            this.loginDataGridViewTextBoxColumn.Width = 110;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
@@ -472,7 +469,7 @@
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Width = 200;
+            this.passwordDataGridViewTextBoxColumn.Width = 151;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -480,7 +477,7 @@
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "First_Name";
             this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 200;
+            this.firstNameDataGridViewTextBoxColumn.Width = 167;
             // 
             // secondNameDataGridViewTextBoxColumn
             // 
@@ -488,7 +485,7 @@
             this.secondNameDataGridViewTextBoxColumn.HeaderText = "Second_Name";
             this.secondNameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.secondNameDataGridViewTextBoxColumn.Name = "secondNameDataGridViewTextBoxColumn";
-            this.secondNameDataGridViewTextBoxColumn.Width = 200;
+            this.secondNameDataGridViewTextBoxColumn.Width = 198;
             // 
             // middleNameDataGridViewTextBoxColumn
             // 
@@ -496,7 +493,7 @@
             this.middleNameDataGridViewTextBoxColumn.HeaderText = "Middle_Name";
             this.middleNameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.Width = 200;
+            this.middleNameDataGridViewTextBoxColumn.Width = 189;
             // 
             // roleDataGridViewTextBoxColumn
             // 
@@ -504,7 +501,7 @@
             this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
             this.roleDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            this.roleDataGridViewTextBoxColumn.Width = 200;
+            this.roleDataGridViewTextBoxColumn.Width = 101;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
@@ -512,7 +509,7 @@
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
             this.phoneDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.Width = 200;
+            this.phoneDataGridViewTextBoxColumn.Width = 119;
             // 
             // genderDataGridViewTextBoxColumn
             // 
@@ -520,7 +517,7 @@
             this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
             this.genderDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 200;
+            this.genderDataGridViewTextBoxColumn.Width = 128;
             // 
             // imageDataGridViewTextBoxColumn
             // 
@@ -528,7 +525,11 @@
             this.imageDataGridViewTextBoxColumn.HeaderText = "Image";
             this.imageDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
-            this.imageDataGridViewTextBoxColumn.Width = 200;
+            this.imageDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // workersBindingSource
+            // 
+            this.workersBindingSource.DataSource = typeof(KR.FolderModel.Workers);
             // 
             // WorkTables2
             // 
@@ -550,7 +551,7 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.BindingSource workersBindingSource;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox first_NameTextBox;
@@ -564,11 +565,6 @@
         private System.Windows.Forms.TextBox second_NameTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonChange;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
@@ -579,6 +575,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource workersBindingSource;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonChange;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Label label1;
     }
 }
